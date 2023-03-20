@@ -36,18 +36,19 @@ function add_bombs() {
         while( bombs_position_one.length < MAX_BOMBS) {
             const random_position = Math.floor(Math.random() * squares.length)
             const bombs_position = random_position
-            const boms_decoration = squares[random_position].innerHTML = `<i class="fa-solid fa-bomb"></i>`
+            squares[random_position].innerHTML = `<i class="fa-solid fa-bomb"></i>`
             if(!bombs_position_one.includes(random_position)) {
                 bombs_position_one.push(bombs_position)
             }
         }
-    
+    return bombs_position_one
 }
 
 btn_el.addEventListener('click', function() {
-    const bombs_position_one = [];
     add_grid_cells()
-    add_bombs()
+    const bombs_position_one = add_bombs();
+    
+    console.log(bombs_position_one);
     
     let squares_el = document.querySelectorAll('.row.py-3 > .col')
     for(let i = 0; i < squares_el.length; i++) {   
