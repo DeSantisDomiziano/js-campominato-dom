@@ -1,0 +1,51 @@
+/* ######### SIZE WEB APP #########  */
+#site-header {
+    height: 100px;
+}
+
+#site-main {
+    height: calc(100vh - 160px);
+    background-color: #282828;
+    overflow-y: auto;
+    color: #008000;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+#site-footer {
+    height: 60px;
+}
+
+/* ########### STRUCTURE SITE MAIN ########## */
+#site-main .dif_easy,
+#site-main .dif_medium,
+#site-main .dif_hard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 4px 1px #ffffff;
+    background-color: black;
+}
+
+#site-main .dif_easy {
+    min-width: calc(100% / 10 - 0.5rem);
+}
+
+#site-main .dif_medium {
+    min-width: calc(100% / 9 - 0.5rem);
+}
+
+#site-main .dif_hard {
+    min-width: calc(100% / 7 - 0.5rem);
+}
+
+#site-main .row {
+    gap:  0.5rem;  
+}
+
+/* ####### BG CADA CLICK TOGGLE ######## */
+.active {
+    background-color: #ff6f00;
+}
